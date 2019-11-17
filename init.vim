@@ -1,8 +1,9 @@
-let g:python3_host_prog='/usr/bin/python'
+let g:python3_host_prog='/home/yilin/anaconda3/bin/python'
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'lervag/vimtex'
+let g:vimtex_compiler_progname = 'nvr'
 
 Plug 'jnurmine/Zenburn'
 
