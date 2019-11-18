@@ -80,3 +80,7 @@ let g:neoterm_size=16 " terminal split size
 let g:neoterm_autoscroll=1 " scroll to the bottom when running a command
 nnoremap <leader><cr> :TREPLSendLine<cr>j " send current line and move down
 vnoremap <leader><cr> :TREPLSendSelection<cr> " send current selection
+
+if (has("termguicolors"))
+  set termguicolors
+endif
