@@ -1,5 +1,4 @@
 let g:python3_host_prog='/home/yilin/anaconda3/bin/python'
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'lervag/vimtex'
@@ -41,6 +40,8 @@ let g:Lf_DefaultMode = 'NameOnly'
 let g:Lf_ShortcutF = '<Leader>e'
 
 Plug 'kassio/neoterm'
+
+Plug 'lilydjwg/fcitx.vim'
 call plug#end()
 
 colorscheme zenburn
@@ -75,7 +76,7 @@ map <Leader>k <Plug>(easymotion-k)
 
 au VimEnter,BufRead,BufNewFile *.jl set filetype=julia
 
-let g:neoterm_default_mod='belowright' " open terminal in bottom split
+let g:neoterm_default_mod='rightbelow' " open terminal in bottom split
 let g:neoterm_size=16 " terminal split size
 let g:neoterm_autoscroll=1 " scroll to the bottom when running a command
 nnoremap <leader><cr> :TREPLSendLine<cr>j " send current line and move down
