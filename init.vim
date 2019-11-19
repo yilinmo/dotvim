@@ -26,6 +26,8 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'easymotion/vim-easymotion'
 
+Plug 'unblevable/quick-scope'
+
 Plug 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
@@ -45,6 +47,12 @@ Plug 'kassio/neoterm'
 
 Plug 'lilydjwg/fcitx.vim'
 call plug#end()
+
+augroup qs_colors
+  autocmd!
+  autocmd ColorScheme * highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+  autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+augroup END
 
 colorscheme zenburn
 
