@@ -1,4 +1,6 @@
 let g:python3_host_prog='/home/yilin/anaconda3/bin/python'
+let mapleader = "\<Space>" 
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'lervag/vimtex'
@@ -63,16 +65,10 @@ autocmd FileType tex setlocal spell spelllang=en_us
 
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
-" Jump to anywhere you want with minimal keystrokes, with just one key binding.
-" `s{char}{label}`
-nmap s <Plug>(easymotion-overwin-f)
-
+nmap s <Plug>(easymotion-overwin-w)
 " Turn on case-insensitive feature
 let g:EasyMotion_smartcase = 1
 
-" JK motions: Line motions
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
 
 au VimEnter,BufRead,BufNewFile *.jl set filetype=julia
 
@@ -85,3 +81,4 @@ vnoremap <leader><cr> :TREPLSendSelection<cr> " send current selection
 if (has("termguicolors"))
   set termguicolors
 endif
+
