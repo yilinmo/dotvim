@@ -9,12 +9,13 @@ let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
 let g:vimtex_quickfix_latexlog = {
-			\ 'overfull' : 0,
-			\ 'underfull' : 0,
-			\ 'packages' : {
-			\   'default' : 0,
-			\ },
-			\}
+      \ 'overfull' : 0,
+      \ 'underfull' : 0,
+      \ 'packages' : {
+      \   'default' : 0,
+      \ },
+      \}
+let maplocalleader = ' '
 
 Plug 'jnurmine/Zenburn'
 
@@ -57,14 +58,14 @@ augroup END
 colorscheme zenburn
 
 inoremap <silent><expr> <TAB>
-			\ pumvisible() ? coc#_select_confirm() :
-			\ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-			\ <SID>check_back_space() ? "\<TAB>" :
-			\ coc#refresh()
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
 
 function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~# '\s'
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 autocmd FileType tex let b:coc_pairs = [["$", "$"]]
@@ -90,3 +91,6 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
+set sw=2
+set ignorecase
+set smartcase
